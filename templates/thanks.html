@@ -6,6 +6,9 @@
 </head>
 <body>
     <h1>{{ welcome | safe }}</h1>
-    <h1>{{ welcome }}</h1>    
+    <h1>{{ welcome }}</h1>
+    {% for item in list_to_iterate %}
+    <a href="{{ item.url }}">{{ item.content }}</a>
+    {% endfor %}    
 </body>
 </html>

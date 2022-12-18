@@ -18,4 +18,5 @@ def add_note():
 @app.route("/thanks")
 def thank_you():
     text_to_show = "Testuje <i>przekazywanie</i> zmiennej do Jinja"
-    return render_template("thanks.html", welcome=text_to_show)
+    items = [{"content": "Onet.pl", "url": "https://onet.pl"}, {"content":"GOOGLE", "url": "https://google.com"}]
+    return render_template("thanks.html", welcome=text_to_show, list_to_iterate=items)
