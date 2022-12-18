@@ -17,4 +17,5 @@ def add_note():
 
 @app.route("/thanks")
 def thank_you():
-    return "Thank you for submitting the note"
+    text_to_show = "Testuje <i>przekazywanie</i> zmiennej do Jinja"
+    return render_template("thanks.html", welcome=text_to_show)
